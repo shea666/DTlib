@@ -3,11 +3,12 @@
 
 #include "Object.h"
 #include "Exception.h"
+#include "List.h"
 
 namespace DTlib
 {
 template <typename T>
-class LinkList : public Object
+class LinkList : public List<T>
 {
 protected :
     struct Node : public Object
