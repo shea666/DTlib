@@ -61,6 +61,11 @@ public :
         }
     }
 
+    ~StaticLinkList()
+    {
+
+    }
+
     int capacity()
     {
         return N;
