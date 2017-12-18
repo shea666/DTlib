@@ -63,7 +63,7 @@ public :
 
     ~StaticLinkList()
     {
-
+        this->clear();
     }
 
     int capacity()

@@ -149,7 +149,7 @@ public :
         return ret;
     }
 
-    virtual T get(int i) const
+    T get(int i) const
     {
         T ret;
         if( get(i,ret) )

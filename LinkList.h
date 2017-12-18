@@ -3,7 +3,6 @@
 
 #include "List.h"
 #include "Exception.h"
-#include "List.h"
 
 namespace DTlib
 {

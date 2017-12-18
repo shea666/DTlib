@@ -1,33 +1,31 @@
 #include <iostream>
-#include "StaticLinkList.h"
+#include "LinkList.h"
+#include "SharedPointer.h"
+#include "CircleList.h"
+#include "DualLinkList.h"
+#include "LinuxList.h"
+#include "DualCircleList.h"
+#include "StaticStack.h"
+#include "LinkStack.h"
+#include "StaticQueue.h"
+#include "LinkQueue.h"
 
 using namespace std;
 using namespace DTlib;
 
+
 int main()
 {
-    StaticLinkList<int,5> list;
-
-    for(int i=0; i<5; i++)
+    LinkQueue<int> queue;
+    for(int i = 0 ; i < 5 ; i++)
     {
-        list.insert(i,i);
+        queue.add(i);
     }
 
-
-    for(list.move(0); !list.end(); list.next())
+    while(queue.length() > 0)
     {
-        if( list.current() == 3 )
-        {
-            list.remove(list.find(list.current()));
-            cout << list.current() << endl;
-        }
+        cout << queue.front() <<endl;
+        queue.remove();
     }
 
-
-    for(list.move(0); !list.end(); list.next())
-    {
-        cout << list.current() << endl;
-    }
-
-    return 0;
 }
