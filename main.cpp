@@ -9,6 +9,8 @@
 #include "LinkStack.h"
 #include "StaticQueue.h"
 #include "LinkQueue.h"
+#include "DTString.h"
+#include "Sort.h"
 
 using namespace std;
 using namespace DTlib;
@@ -16,16 +18,11 @@ using namespace DTlib;
 
 int main()
 {
-    LinkQueue<int> queue;
-    for(int i = 0 ; i < 5 ; i++)
+    int array[] = {2,435,657,8,5,8,4,98,48,95};
+    Sort::Quick(array,10,0);
+    for(int i = 0 ;i < 10; i++)
     {
-        queue.add(i);
+        cout << array[i] <<endl;
     }
-
-    while(queue.length() > 0)
-    {
-        cout << queue.front() <<endl;
-        queue.remove();
-    }
-
+    return 0;
 }
